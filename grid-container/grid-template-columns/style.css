@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.grid {
+    display: grid;
+}
+
+.grid-template-columns {
+    grid-template-columns: 100px 100px 100px 100px;
+}
+
+.grid-template-columns-2 {
+    grid-template-columns: 1fr 2fr;
+}
+
+
+.grid-template-columns-3 {
+    grid-template-columns: minmax(200px, 1fr) 1fr 1fr;
+}
+
+.grid-template-columns-4 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-template-columns-5 {
+    grid-template-columns: repeat(auto-fit, 100px);
+}
+
+.grid-template-columns-6 {
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    max-width: 800px !important;
+}
+
+.grid-template-columns-7 {
+    grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+    max-width: 800px !important;
+}
+
+.itemTeste {
+    background: brown !important;
+}
+
+body {
+    text-align: center;
+    font-size: .85em;
+    font-family: "Roboto";
+}
+
+body > div {
+    padding: 10px 0;
+}
+
+body > div:nth-of-type(even) {
+    background: #e7e7e7;
+    margin: 25px 0;
+}
+
+body > div section{
+    max-width: 400px;
+    margin: 15px auto;
+    border: 2px solid gray;
+}
+
+body > div h1 {
+    color: black;
+    margin: 0;
+}
+
+.item {
+    margin: 5px;
+    font-size: 1.5em;
+    background: rgb(48, 91, 219);
+}
+
+
