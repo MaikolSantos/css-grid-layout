@@ -2,32 +2,23 @@
 
 .grid {
     display: grid;  
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 50px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
 }
 
 .start {
-    justify-items: start;
+    align-items: start;
 }
 
 .end {
-    justify-items: end;
+    align-items: end;
 }
 .center {
-    justify-items: center;
+    align-items: center;
 }
 
 .stretch {
-    justify-items: stretch;
-}
-
-
-.span-2-rows {
-    grid-row: span 2;
-}
-
-.span-2-columns {
-    grid-column: span 2;
+    align-items: stretch;
 }
 
 
