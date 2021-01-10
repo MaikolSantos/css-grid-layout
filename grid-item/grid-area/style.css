@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.grid {
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 50px;
+}
+
+.grid-area-1 .item-1 {
+    grid-area: 1 / 2 / 4 / 3;
+    /*  Atalho para:
+        grid-row-start: 1;
+        grid-column-start: 2;
+        grid-row-end: 4;
+        grid-column-end: 3; */
+}
+
+.grid-area-1 .item-5 {
+    grid-area: 2 / 3 / 4 / 4;
+}
+
+.grid-area-2 {
+    grid-template-areas: 
+    "header header header"
+    "sidenav content abs"
+    "sidenav footer footer"
+    ;
+}
+
+.grid-area-2 .item-1 {
+    grid-area: header;
+}
+
+.grid-area-2 .item-2 {
+    grid-area: sidenav;
+}
+
+.grid-area-2 .item-5 {
+    grid-area: footer;
+}
+
+.grid-area-3 {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+
+.grid-area-3 .item {
+    background-color: rgba(165, 42, 42, 0.322);
+}
+
+.grid-area-3 .item-1 {
+    grid-area: 2 / 2 / 4 / 5;
+    background: red;
+    mix-blend-mode: screen;
+}
+
+.grid-area-3 .item-2 {
+    grid-area: 3 / 3 / span 3 / span 2;
+    background: rgb(0, 255, 0);
+    mix-blend-mode: screen;
+}
+
+.grid-area-3 .item-12 {
+    grid-area: 1 / 4 / 7 / span 2;
+    background: blue;
+    mix-blend-mode: screen;
+}
+
+
+
+body {
+    color: white;
+    text-align: center;
+    font-size: .85em;
+    font-family: "Roboto";
+}
+
+body > div {
+    padding: 10px 0;
+}
+
+body > div:nth-of-type(even) {
+    background: #e7e7e7;
+    margin: 25px 0;
+}
+
+body > div section{
+    max-width: 400px;
+    margin: 15px auto;
+    border: 2px solid gray;
+}
+
+body > div h1 {
+    color: black;
+    margin: 0;
+}
+
+.item {
+    margin: 5px;
+    font-size: 1.5em;
+    background: rgb(48, 91, 219);
+}
+
+
