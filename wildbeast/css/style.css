@@ -178,12 +178,7 @@ img {
     .sidenav li a {
         margin: 30px 30px 30px 0;
     }
-
-
-
-
 }
-
 
 /* Conteúdo Principal */
 .content {
@@ -203,6 +198,15 @@ img {
 .imagem-1 {
     grid-row: span 2;
     align-self: end;
+}
+
+@media (max-width: 600px) {
+    img {
+        width: 100%;
+    }
+    .content {
+        grid-template-columns: auto;
+    }
 }
 
 .imagem-2 {
@@ -318,8 +322,6 @@ p {
     border-top: 2px solid #b07dfb;
 }
 
-
-
 /* Anúncios */
 .anuncios {
     grid-area: anuncios;
@@ -328,6 +330,7 @@ p {
     align-content: start;
     padding: 30px;
     grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 /* Footer */
